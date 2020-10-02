@@ -1,0 +1,121 @@
+@media screen and (min-width: 750px){
+    .about-img img {
+        width: initial;
+      }
+
+
+      .about-img.black-about {
+        grid-column: 2/ 3;
+        overflow: hidden;
+      }
+
+
+      section.card {
+        grid-row: 2 / span 1;
+      }
+
+
+      .about-img.white-about {
+        grid-column: 1 / -1;
+        text-align: center;
+      }
+
+
+      .about-img.white-about img {
+        margin: auto 0;
+      }
+
+
+      .about-img.black-about img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+}
+@media screen and (min-width: 1040px) {
+    picture.about-img:nth-child(3) {
+        grid-column: initial;
+    }
+    picture.about-img:nth-child(5) {
+        grid-column: initial;
+    }
+    section.card {
+        grid-row: initial;
+    }
+    .about-img img {
+        width: 100%;
+    }
+    body{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .intro{
+        grid-column: span 2;
+    }
+
+    
+
+}
+
+
+
+/* style.min.css | http://127.0.0.1:5500/dist/css/style.min.css */
+@media screen and (min-width: 1024px) {
+    .hero img {
+        /* width: 375px; */
+        /* height: 360px; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .hero {
+        /* height: 0; */
+      }
+      
+      .intro {
+        height: initial;
+      }
+      
+      /* Element | http://127.0.0.1:5500/dist/index.html */
+      
+      body {
+        grid-template-rows: 534px 1fr;
+      }
+      
+      /* media.min.css | http://127.0.0.1:5500/dist/css/media.min.css */
+      
+      
+        .intro {
+          /* grid-column: span 2; */
+          grid-column: 1/8;
+        }
+        body {
+          /* grid-template-columns: repeat(4,1fr); */
+          grid-template-columns: repeat(11,1fr);
+        }
+      
+      /* Element | http://127.0.0.1:5500/dist/index.html */
+      
+      main.card {
+        grid-column: 8/-1;
+      }
+      
+      /* Element | http://127.0.0.1:5500/dist/index.html */
+      
+      picture.about-img:nth-child(3) {
+        grid-column: span 3;
+      }
+      
+      /* Element | http://127.0.0.1:5500/dist/index.html */
+      
+      section.card {
+        grid-column: span 4;
+      }
+      
+      /* Element | http://127.0.0.1:5500/dist/index.html */
+      
+      picture.about-img:nth-child(5) {
+        grid-column: 8/-1;
+      }
+}
+
