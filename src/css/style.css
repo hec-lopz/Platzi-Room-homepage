@@ -32,10 +32,6 @@ body{
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
     grid-template-columns: repeat(auto-fill, minmax(auto, 375px));
 }
-body> *{
-    /* min-width: 0; */
-    /* max-width: var(--mobile-width); */
-}
 
 html{
     margin: 0;
@@ -44,6 +40,13 @@ html{
 }
 *, *::after, *::before {
     box-sizing: inherit;
+}
+a, ul, li{
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
 }
 .intro{
     position: relative;
@@ -69,6 +72,7 @@ html{
 .header .burger-icon{
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 .header .burger-icon svg{
     width: 100%;
@@ -88,15 +92,58 @@ html{
 .slider-icon{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 50%;
 }
+.slider-icon:hover{
+    background-color: var(--very-dark-gray);
+}
+.slider-icon:active{
+    background-color: var(--dark-gray);
+}
+
 .slider-icon path{
     stroke-width: 2px;
-    stroke: var(--dark-gray)
+    stroke: var(--white)
 }
 
 .nav-box{
-    display: none;
+    display: flex;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    background-color: var(--white);
+    height: 200%;
+    align-items: center;
+    font-size: 1.3em;
+    justify-content: space-around;
+    transform: translate(-100%) ;
+    transition: transform ease-in-out 250ms, opacity 200ms;
 }
+.nav-box.active{
+    transform: translate(0);
+    opacity: 1;
+}
+.nav-box ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-box a{
+    padding: 5px 0;
+    text-transform: lowercase;
+}
+li+li {
+    margin-left: 30px;
+}
+/* .nav-box a:hover{
+    border-bottom-style: solid;
+    border-color: white;
+    border-bottom-width: 2px;
+
+} */
+
 
 .hero img{
     width: 375px;
@@ -127,14 +174,27 @@ html{
 .card p {
     font-size: .8em;
     color: var(--dark-gray);
+    object-fit: cover;
 }
 
 .about-img img {
     width: 100%;
+    height: 100%;
+}
+.shop-btn{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .7em;
+    font-size: .7em;
+    padding: 20px 0;
 }
 
+.shop-btn:hover{color: var(--dark-gray);}
+.shop-btn:hover path{stroke:var(--dark-gray)}
+.shop-btn:active{color: var(--very-dark-gray);}
 
 
-/* style.min.css | http://127.0.0.1:5500/dist/css/style.min.css?_cacheOverride=1601627006028 */
+
+
 
 
