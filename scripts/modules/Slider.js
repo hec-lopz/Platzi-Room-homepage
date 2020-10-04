@@ -17,7 +17,6 @@ class Slider{
             id = math(id);
         }
         item = this.findItem(this.items_array, id);
-        debugger
         item[0].printData();
     }
 }
