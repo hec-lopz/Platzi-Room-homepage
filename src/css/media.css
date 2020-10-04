@@ -1,39 +1,42 @@
 @media screen and (min-width: 750px){
-    .hero img{
-      object-fit: cover;
-      object-position: center;
+  body{
+    grid-template-columns: repeat(2,minmax(auto,430px));
+  }
+  .hero img{
+    object-fit: cover;
+    object-position: center;
+  }
+  .about-img img {
+      width: initial;
     }
-    .about-img img {
-        width: initial;
-      }
 
 
-      .about-img.black-about {
-        grid-column: 2/ 3;
-        overflow: hidden;
-      }
+    .about-img.black-about {
+      grid-column: 2/ 3;
+      overflow: hidden;
+    }
 
 
-      section.card {
-        grid-row: 2 / span 1;
-      }
+    section.card {
+      grid-row: 2 / span 1;
+    }
 
 
-      .about-img.white-about {
-        grid-column: 1 / -1;
-        text-align: center;
-      }
+    .about-img.white-about {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
 
 
-      .about-img.white-about img {
-        margin: auto 0;
-      }
+    .about-img.white-about img {
+      margin: auto 0;
+    }
 
 
-      .about-img.black-about img {
-        height: 100%;
-        object-fit: cover;
-      }
+    .about-img.black-about img {
+      height: 100%;
+      object-fit: cover;
+    }
 
 }
 
