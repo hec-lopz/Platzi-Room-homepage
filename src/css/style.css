@@ -30,7 +30,7 @@ body{
     display: grid;
     justify-content: center;
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
-    grid-template-columns: repeat(auto-fill, minmax(auto, 375px));
+    /* grid-template-columns: repeat(auto-fill, minmax(auto, 375px)); */
 }
 
 html{
@@ -174,8 +174,10 @@ li+li {
 
 
 .hero img{
-    width: 375px;
-    height: 360px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
 }
 .hero{
     height: 0;
